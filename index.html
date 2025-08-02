@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performans Arttırıcılar Hakkında Araştırma 2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        
+        .chart-container {
+            position: relative;
+            height: 400px !important;
+            width: 100% !important;
+            margin: 20px 0;
+            pointer-events: auto !important;
+        }
+        
+        .chart-container canvas {
+            pointer-events: none !important;
+            position: relative !important;
+        }
+        
+        .card {
+            background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        
+        .trivia-box {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+        
+        .stat-highlight {
+            background: linear-gradient(135deg, #059669, #10b981);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 4px;
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            border: 1px solid #f87171;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+        
+        .legal-supplement {
+            background: linear-gradient(135deg, #16a085, #27ae60);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .illegal-substance {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #333;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 12px 24px;
+            background: #2a2a2a;
+            border: none;
+            color: #ccc;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            margin-right: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .tab.active {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        h1 { color: #3b82f6; font-size: 2.5rem; font-weight: 700; }
+        h2 { color: #10b981; font-size: 2rem; font-weight: 600; margin-top: 40px; }
+        h3 { color: #f59e0b; font-size: 1.5rem; font-weight: 600; margin-top: 30px; }
+        h4 { color: #8b5cf6; font-size: 1.25rem; font-weight: 600; margin-top: 20px; }
+        
+        .author-badge {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 20px 0;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+        
+        .performance-quote {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            border-left: 5px solid #10b981;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-style: italic;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .tabs {
+                flex-direction: column;
+            }
+            .tab {
+                margin: 0 0 4px 0;
+                border-radius: 8px;
+            }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .card { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Hazırlayan Badge -->
+        <div class="text-center mb-8">
+            <div class="author-badge">
+                <i class="fas fa-user-graduate mr-2"></i>
+                Hazırlayan: Ümit Emre Erdoğan
+            </div>
+        </div>
+
+        <!-- Başlık -->
+        <header class="text-center mb-12">
+            <h1 class="mb-4">⚡ Performans Arttırıcılar Hakkında Araştırma 2025</h1>
+            <p class="text-xl text-gray-300">Atletizm ve Dayanıklılık Sporlarında Kapsamlı Analiz</p>
+        </header>
+
+        <!-- Performance Quote -->
+        <div class="performance-quote">
+            <i class="fas fa-quote-left text-2xl mb-4 text-green-400"></i>
+            <p class="text-xl mb-4">En büyük performans arttırıcı düzenli ve bilinçli antrenmandır.</p>
+            <p class="text-lg">Tamamen Yasaldır. Dengesi, dozu ve frekansı ayarlanarak Sürekli kullanılabilir :)</p>
+            <i class="fas fa-quote-right text-2xl mt-4 text-green-400"></i>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('overview')">
+                <i class="fas fa-chart-line mr-2"></i>Genel Bakış
+            </button>
+            <button class="tab" onclick="showTab('legal')">
+                <i class="fas fa-check-circle mr-2"></i>Yasal Arttırıcılar
+            </button>
+            <button class="tab" onclick="showTab('illegal')">
+                <i class="fas fa-ban mr-2"></i>Yasal Olmayan
+            </button>
+            <button class="tab" onclick="showTab('trivia')">
+                <i class="fas fa-lightbulb mr-2"></i>İlginç Bilgiler
+            </button>
+        </div>
+
+        <!-- Overview Tab -->
+        <div id="overview" class="tab-content active">
+            <div class="card">
+                <h2><i class="fas fa-globe mr-3"></i>2024 Dünya Doping İstatistikleri</h2>
+                <div class="trivia-box">
+                    <p><strong>🤯 Şaşırtıcı Gerçek:</strong> 2024'te toplamda 481 atlet yasaklandı - bu saniyede 1 sporcu demek!</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="dopingChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-flask mr-3"></i>Performans Artış Oranları</h2>
+                <div class="trivia-box">
+                    <p><strong>💡 İlginç Bilgi:</strong> EPO %15 performans artışı sağlarken, kafein sadece %3-7 - ama biri yasal!</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-search mr-3"></i>Tespit Oranları Analizi</h2>
+                <div class="trivia-box">
+                    <p><strong>🔍 Çarpıcı Veri:</strong> Mikrodozaj kullanımı %78'e ulaştı - modern dopingin yeni trendi!</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="detectionChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legal Tab -->
+        <div id="legal" class="tab-content">
+            <div class="card">
+                <h2><i class="fas fa-leaf mr-3"></i>Yasal Performans Arttırıcıları</h2>
+                <div class="trivia-box">
+                    <p><strong>🏃‍♂️ Sporcu Hikayes:</strong> Mo Farah yarış öncesi tam 3.5 mg/kg kafein alır - bir saniye fazla alsaydı doping olurdu!</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-bolt mr-2"></i>Kreatin Monohidrat</h4>
+                    <p><strong>Doz:</strong> 3-5g/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> ATP-PCr sistemi rejenerasyonu</p>
+                    <p><strong>Performans Artışı:</strong> %10-15 güç artışı</p>
+                    <div class="trivia-box">
+                        <p><strong>💡 İlginç:</strong> Vücutta sadece 120g kreatin var, 3-5g supplement %15 güç artışı sağlar!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Su tutulması, kilo artışı (2-3kg)</p>
+                    <p><strong>Kullanım:</strong> Yükleme fazı (20g/5 gün) sonra idame (3-5g/gün)</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-coffee mr-2"></i>Kafein</h4>
+                    <p><strong>Doz:</strong> 3-6 mg/kg vücut ağırlığı</p>
+                    <p><strong>Etki Mekanizması:</strong> Adenozin reseptör blokajı, merkezi sinir sistemi uyarımı</p>
+                    <p><strong>Performans Artışı:</strong> %3-7 dayanıklılık artışı</p>
+                    <div class="trivia-box">
+                        <p><strong>🤯 Paradoks:</strong> Günde 6 fincan kahve içen atlet, yarıştan 30 dk önce tek fincanla yakalanabilir!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Jitter, uykusuzluk, kalp çarpıntısı</p>
+                    <p><strong>Zamanlama:</strong> Yarıştan 30-60 dakika önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-fire mr-2"></i>Beta-Alanin</h4>
+                    <p><strong>Doz:</strong> 3-5g/gün (bölünmüş dozlarda)</p>
+                    <p><strong>Etki Mekanizması:</strong> Kas pH tamponlama, karnosin sentezi</p>
+                    <p><strong>Performans Artışı:</strong> %2-3 dayanıklılık artışı</p>
+                    <div class="trivia-box">
+                        <p><strong>🔥 Sır:</strong> Karıncalanma hissi = çalışıyor demek! Bu his olmazsa etki de olmaz</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Paresthesia (karıncalanma), mide rahatsızlığı</p>
+                    <p><strong>Yükleme:</strong> 4-6 hafta düzenli kullanım gerekli</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-balance-scale mr-2"></i>Sodyum Bikarbonat</h4>
+                    <p><strong>Doz:</strong> 0.3g/kg vücut ağırlığı</p>
+                    <p><strong>Etki Mekanizması:</strong> Kan pH tamponu, asit-baz dengeleme</p>
+                    <p><strong>Performans Artışı:</strong> %1-3 anaerobik performans</p>
+                    <div class="trivia-box">
+                        <p><strong>📊 İstatistik:</strong> Paris 2024'te dayanıklılık sporcularının %80'i kullandı - "yasal doping"!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Mide bulantısı, ishal, karın ağrısı</p>
+                    <p><strong>Zamanlama:</strong> Yarıştan 90-120 dakika önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-seedling mr-2"></i>Beetroot Juice (Nitrat)</h4>
+                    <p><strong>Doz:</strong> 5-9 mmol nitrat (500ml pancar suyu)</p>
+                    <p><strong>Etki Mekanizması:</strong> Nitrik oksit üretimi, vazodilatasyon</p>
+                    <p><strong>Performans Artışı:</strong> %2-3 oksijen verimliliği</p>
+                    <div class="trivia-box">
+                        <p><strong>🚀 Uzay Bağlantısı:</strong> NASA astronotları da kullanıyor - Mars'ta performans için!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Beeturia (pembe idrar), mide rahatsızlığı</p>
+                    <p><strong>Zamanlama:</strong> Yarıştan 2-3 saat önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-dumbbell mr-2"></i>Protein Tozu</h4>
+                    <p><strong>Doz:</strong> 20-25g egzersiz sonrası</p>
+                    <p><strong>Etki Mekanizması:</strong> mTOR aktivasyonu, kas protein sentezi</p>
+                    <p><strong>Performans Artışı:</strong> Recovery hızlanması, kas korunması</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, sindirim sorunları (nadir)</p>
+                    <p><strong>Zamanlama:</strong> Egzersiz sonrası 30 dakika içinde</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-pills mr-2"></i>BCAA (Dallanmış Zincir Amino Asitler)</h4>
+                    <p><strong>Doz:</strong> 10-15g egzersiz öncesi/sırası</p>
+                    <p><strong>Etki Mekanizması:</strong> Leucine sinyal yolu, kas katabolizması azalması</p>
+                    <p><strong>Performans Artışı:</strong> Yorgunluk azalması, recovery artışı</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, yüksek dozda yorgunluk</p>
+                    <p><strong>Oran:</strong> 2:1:1 (Leucine:Isoleucine:Valine)</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-fire-alt mr-2"></i>L-Karnitin</h4>
+                    <p><strong>Doz:</strong> 2-3g/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> β-oksidazyon, yağ yakımı artışı</p>
+                    <p><strong>Performans Artışı:</strong> Yağ oksidasyonu %10-15 artış</p>
+                    <p><strong>Yan Etkiler:</strong> Balık kokusu, mide rahatsızlığı</p>
+                    <p><strong>Zamanlama:</strong> Öncesi/sonrası, karbohidratla beraber</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-heart mr-2"></i>Taurin</h4>
+                    <p><strong>Doz:</strong> 1-3g/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> Antioksidan, kas kasılma verimliliği</p>
+                    <p><strong>Performans Artışı:</strong> Oksidatif stres azalması</p>
+                    <div class="trivia-box">
+                        <p><strong>🐂 İlginç Gerçek:</strong> Asıl kaynağı bull sperm - o yüzden "boğa" ile ilişkilendirilir!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Minimal, yüksek dozda hipotansiyon</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-shield-alt mr-2"></i>HMB (β-Hydroxy β-Methylbutyrate)</h4>
+                    <p><strong>Doz:</strong> 3g/gün (1g x 3)</p>
+                    <p><strong>Etki Mekanizması:</strong> mTOR korunması, kas yıkımı azalması</p>
+                    <p><strong>Performans Artışı:</strong> Kas korunması, recovery artışı</p>
+                    <div class="trivia-box">
+                        <p><strong>🥑 Keşif:</strong> Avokado ve greyfurt kabuğundan keşfedildi!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Minimal, GI distress (nadir)</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-hospital mr-2"></i>Glutamine</h4>
+                    <p><strong>Doz:</strong> 10-15g/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> İmmün destek, glycogen sentezi</p>
+                    <p><strong>Performans Artışı:</strong> Recovery artışı, hastalık azalması</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, yüksek dozda amonyak artışı</p>
+                    <p><strong>Zamanlama:</strong> Egzersiz sonrası, yatmadan önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-water mr-2"></i>Citrulline Malate</h4>
+                    <p><strong>Doz:</strong> 6-8g egzersiz öncesi</p>
+                    <p><strong>Etki Mekanizması:</strong> Vazodilatasyon, laktik asit klerens</p>
+                    <p><strong>Performans Artışı:</strong> Kan akışı artışı, yorgunluk azalması</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, mide rahatsızlığı</p>
+                    <p><strong>Zamanlama:</strong> Egzersizden 30-45 dakika önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-leaf mr-2"></i>Rhodiola Rosea</h4>
+                    <p><strong>Doz:</strong> 200-400mg/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> HPA eksen modülasyonu, adaptogen</p>
+                    <p><strong>Performans Artışı:</strong> Stres azalması, mental performans</p>
+                    <p><strong>Yan Etkiler:</strong> Baş dönmesi, uykusuzluk</p>
+                    <p><strong>Zamanlama:</strong> Sabah, aç karnına</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-cherry mr-2"></i>Cherry Juice (Tart Cherry)</h4>
+                    <p><strong>Doz:</strong> 240-480ml/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> Antioksidan, melatonin precursor</p>
+                    <p><strong>Performans Artışı:</strong> Recovery artışı, uyku kalitesi</p>
+                    <div class="trivia-box">
+                        <p><strong>😴 Uyku Mucizesi:</strong> Michigan araştırması: 7 gün = 84 dakika daha fazla uyku!</p>
+                    </div>
+                    <p><strong>Yan Etkiler:</strong> Minimal, şeker içeriği</p>
+                    <p><strong>Zamanlama:</strong> Egzersiz sonrası, yatmadan önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-dna mr-2"></i>Ribose</h4>
+                    <p><strong>Doz:</strong> 5g egzersiz öncesi/sonrası</p>
+                    <p><strong>Etki Mekanizması:</strong> Purin nükleotid döngüsü, ATP rejenerasyonu</p>
+                    <p><strong>Performans Artışı:</strong> Energy recovery hızlanması</p>
+                    <p><strong>Yan Etkiler:</strong> Hipoglisemi, mide rahatsızlığı</p>
+                    <p><strong>Zamanlama:</strong> Egzersiz öncesi 30 dakika</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-bolt mr-2"></i>CoQ10 (Koenzim Q10)</h4>
+                    <p><strong>Doz:</strong> 100-200mg/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> Elektron transport zinciri, mitokondriyal fonksiyon</p>
+                    <p><strong>Performans Artışı:</strong> Oksidatif kapasite artışı</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, uykusuzluk</p>
+                    <p><strong>Zamanlama:</strong> Yağlı yemekle beraber</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-magnet mr-2"></i>Magnesium</h4>
+                    <p><strong>Doz:</strong> 200-400mg/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> Kas-sinir fonksiyonu, ATP sentezi</p>
+                    <p><strong>Performans Artışı:</strong> Kramp azalması, recovery artışı</p>
+                    <p><strong>Yan Etkiler:</strong> İshal, mide rahatsızlığı</p>
+                    <p><strong>Zamanlama:</strong> Yatmadan önce</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-sun mr-2"></i>Vitamin D</h4>
+                    <p><strong>Doz:</strong> 1000-4000 IU/gün</p>
+                    <p><strong>Etki Mekanizması:</strong> Kas protein sentezi, kalsiyum homeostazı</p>
+                    <p><strong>Performans Artışı:</strong> Kas gücü artışı, yaralanma azalması</p>
+                    <p><strong>Yan Etkiler:</strong> Hiperkalsemi (yüksek dozda)</p>
+                    <p><strong>Test:</strong> 25(OH)D seviyesi >30 ng/mL olmalı</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-tint mr-2"></i>Iron (Demir)</h4>
+                    <p><strong>Doz:</strong> 18mg/gün (kadınlar için daha fazla)</p>
+                    <p><strong>Etki Mekanizması:</strong> Hemoglobin-myoglobin oksijen taşınması</p>
+                    <p><strong>Performans Artışı:</strong> VO2max artışı, yorgunluk azalması</p>
+                    <p><strong>Yan Etkiler:</strong> Konstipasyon, mide rahatsızlığı</p>
+                    <p><strong>Test:</strong> Ferritin, hemoglobin, hematokrit kontrol</p>
+                </div>
+
+                <div class="legal-supplement">
+                    <h4><i class="fas fa-pills mr-2"></i>B-Complex Vitaminler</h4>
+                    <p><strong>Doz:</strong> Full spectrum B-complex</p>
+                    <p><strong>Etki Mekanizması:</strong> Enerji metabolizması, laktik asit metabolizması</p>
+                    <p><strong>Performans Artışı:</strong> Enerji üretimi optimizasyonu</p>
+                    <p><strong>Yan Etkiler:</strong> Minimal, idrar rengi değişimi</p>
+                    <p><strong>Zamanlama:</strong> Sabah yemekle beraber</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Illegal Tab -->
+        <div id="illegal" class="tab-content">
+            <div class="warning-box">
+                <h3><i class="fas fa-exclamation-triangle mr-3"></i>🚨 YASAL OLMAYAN DOPING MADDELERİ SAĞLIK UYARISI</h3>
+                <p class="mb-4">Bu araştırmada yer alan yasal olmayan doping maddeleri <strong>CİDDİ SAĞLIK RİSKLERİ</strong> taşır:</p>
+                
+                <h4>💀 HAYATI TEHLİKE RİSKLERİ:</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Ani kalp durması ve ritim bozuklukları</li>
+                    <li>Karaciğer hasarı ve yetmezliği</li>
+                    <li>Böbrek fonksiyon bozukluğu</li>
+                    <li>Hormonal sistem çöküşü</li>
+                    <li>Psikolojik bağımlılık ve depresyon</li>
+                </ul>
+
+                <h4>⚡ PERFORMANS PARADOKSİ:</h4>
+                <p class="mb-4">Kısa vadeli performans artışı, uzun vadede kalıcı sağlık sorunlarına yol açar.</p>
+
+                <h4>🏆 ETİK VE YASAL SORUMLULUK:</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Spor etiği ihlali</li>
+                    <li>Yasal cezai sorumluluk</li>
+                    <li>Kariyerin sona ermesi</li>
+                    <li>Toplumsal saygınlık kaybı</li>
+                </ul>
+
+                <p class="text-center font-bold text-xl">Bu bilgiler sadece EĞİTİM ve ARAŞTIRMA amaçlıdır.</p>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-ban mr-3"></i>Yasal Olmayan Performans Arttırıcıları</h2>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-syringe mr-2"></i>EPO (Eritropoietin)</h4>
+                    <div class="trivia-box">
+                        <p><strong>🩸 EPO Hikayesi:</strong> 1977'de anemi için geliştirildi, 1990'da bisikletçiler keşfetti, şimdi %78'i mikrodozaj!</p>
+                    </div>
+                    <p><strong>Mikrodozaj Protokolü:</strong> 9-20 IU/kg, haftada 3 kez</p>
+                    <p><strong>Performans Artışı:</strong> %10-15 dayanıklılık artışı</p>
+                    <p><strong>Tespit Oranı:</strong> %20-60 (mikrodozajda)</p>
+                    <p><strong>Tespit Penceresi:</strong> 24-72 saat</p>
+                    <p><strong>Maskeleme:</strong> Timing manipulation, baseline alteration</p>
+                    <p><strong>Riskler:</strong> Kan pıhtılaşması, felç, kalp krizi</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Testosterone</h4>
+                    <div class="trivia-box">
+                        <p><strong>🔬 T/E Oranı:</strong> 4:1 threshold - epitestosterone ile kandırma tekniği yaygın!</p>
+                    </div>
+                    <p><strong>Mikrodozaj Protokolü:</strong> 12.5mg topikal, günlük</p>
+                    <p><strong>Performans Artışı:</strong> %8-12 kas gücü artışı</p>
+                    <p><strong>Tespit Penceresi:</strong> 48 saat (mikrodozaj)</p>
+                    <p><strong>Maskeleme:</strong> Epitestosterone co-administration</p>
+                    <p><strong>Riskler:</strong> Karaciğer hasarı, kalp hastalığı, agresyon</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-dna mr-2"></i>Büyüme Hormonu (GH)</h4>
+                    <div class="trivia-box">
+                        <p><strong>🔬 GH-2000 Test:</strong> IGF-1 ve P-III-NP kombinasyonu ile tespit - sadece %35 yakalama oranı!</p>
+                    </div>
+                    <p><strong>Mikrodozaj Protokolü:</strong> Düşük doz, IGF-1 kombinasyonu</p>
+                    <p><strong>Performans Artışı:</strong> %5-8 recovery artışı</p>
+                    <p><strong>Tespit Penceresi:</strong> 24-48 saat (isoform test)</p>
+                    <p><strong>Maskeleme:</strong> Biomarker manipulation</p>
+                    <p><strong>Riskler:</strong> Akromegali, diyabet, kalp büyümesi</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-capsules mr-2"></i>SARMs (Selective Androgen Receptor Modulators)</h4>
+                    <div class="trivia-box">
+                        <p><strong>📊 NCAA Threshold:</strong> 100 picogram detection limit - çok hassas testler!</p>
+                    </div>
+                    <p><strong>Ostarine Mikrodozaj:</strong> Elimination profiles, contamination mimicking</p>
+                    <p><strong>RAD-140:</strong> Endurance artışı, stamina geliştirme</p>
+                    <p><strong>Performans Artışı:</strong> %6-10 kas performans artışı</p>
+                    <p><strong>Tespit Penceresi:</strong> 2-4 hafta</p>
+                    <p><strong>Riskler:</strong> Karaciğer toksisitesi, hormonal baskılama</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-heart mr-2"></i>GW501516 (Cardarine)</h4>
+                    <div class="trivia-box">
+                        <p><strong>⚠️ Kanser Riski:</strong> Klinik denemeler kanser nedeniyle durduruldu - hala kullanılıyor!</p>
+                    </div>
+                    <p><strong>Protokol:</strong> PPAR-delta aktivasyonu</p>
+                    <p><strong>Performans Artışı:</strong> %8-12 kardiyovasküler performans</p>
+                    <p><strong>Tespit Penceresi:</strong> 4-6 hafta</p>
+                    <p><strong>Riskler:</strong> Kanser riski, karaciğer hasarı</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Tramadol</h4>
+                    <div class="trivia-box">
+                        <p><strong>🚴‍♂️ Tour de France:</strong> 2024 yasaklanmadan önce bisikletçilerin %80'i kullanıyordu - "yasal morfin"!</p>
+                    </div>
+                    <p><strong>Performans Dozu:</strong> 100mg, yarıştan 1-2 saat önce</p>
+                    <p><strong>Performans Artışı:</strong> %1.3 güç artışı, ağrı toleransı</p>
+                    <p><strong>Tespit Penceresi:</strong> 24 saat</p>
+                    <p><strong>LOD:</strong> >50 ng/mL urine</p>
+                    <p><strong>Riskler:</strong> Bağımlılık, solunumsal depresyon</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-atom mr-2"></i>AICAR</h4>
+                    <div class="trivia-box">
+                        <p><strong>🧬 Gen Dopingi:</strong> AMPK aktivatörü - "exercise in a pill" olarak biliniyor!</p>
+                    </div>
+                    <p><strong>Protokol:</strong> AMPK pathway activation</p>
+                    <p><strong>LOD:</strong> 1-10 ng/mL</p>
+                    <p><strong>Tespit Penceresi:</strong> 72 saat</p>
+                    <p><strong>Performans Artışı:</strong> %10-15 dayanıklılık (hayvan çalışması)</p>
+                    <p><strong>Riskler:</strong> İnsan kullanımı onaylanmamış, bilinmeyen etkiler</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-wind mr-2"></i>Xenon Gazı</h4>
+                    <div class="trivia-box">
+                        <p><strong>💨 Nadir Gaz:</strong> HIF aktivasyonu - 0.5 nmol/mL detection limit ile tespit!</p>
+                    </div>
+                    <p><strong>Protokol:</strong> İnhalasyon, HIF-1α aktivasyonu</p>
+                    <p><strong>Etki:</strong> EPO üretimi artışı</p>
+                    <p><strong>Tespit:</strong> GC/MS with 0.5 nmol/mL limit</p>
+                    <p><strong>Riskler:</strong> Anestezi etkisi, bilinmeyen uzun vadeli etkiler</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-dna mr-2"></i>Designer Peptidler</h4>
+                    <div class="trivia-box">
+                        <p><strong>🧪 31 Çeşit:</strong> GHRP-1'den TB500'e kadar sentetik peptid ordusu!</p>
+                    </div>
+                    <p><strong>Çeşitler:</strong> GHRP-1,2,3,4,5,6, Hexarelin, Ipamorelin, TB500 vs.</p>
+                    <p><strong>Tespit Zorluğu:</strong> Kısa yarı ömür, endojen benzerlik</p>
+                    <p><strong>Analiz:</strong> LC-HRMS/MS, SPE cleanup required</p>
+                    <p><strong>Riskler:</strong> Bilinmeyen uzun vadeli etkiler</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Beta-2 Agonistler</h4>
+                    <div class="trivia-box">
+                        <p><strong>💨 Astım İlacı:</strong> Clenbuterol kas büyütücü, salbutamol performans arttırıcı!</p>
+                    </div>
+                    <p><strong>Clenbuterol:</strong> Anabolik ve lipolytic etkiler</p>
+                    <p><strong>Salbutamol:</strong> Protein turnover artışı</p>
+                    <p><strong>Tespit:</strong> Threshold değerleri mevcut</p>
+                    <p><strong>Riskler:</strong> Kardiyotoksisite, tremor, kalp ritim bozukluğu</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Stimulanlar</h4>
+                    <div class="trivia-box">
+                        <p><strong>⚡ Amfetamin:</strong> 48 saat tespit penceresi - en kolay yakalanan doping!</p>
+                    </div>
+                    <p><strong>Amfetamin:</strong> %5-10 performans artışı</p>
+                    <p><strong>Tespit Penceresi:</strong> 48-72 saat</p>
+                    <p><strong>Yakalama Oranı:</strong> %80 (en yüksek)</p>
+                    <p><strong>Riskler:</strong> Bağımlılık, psikoz, kalp krizi</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-syringe mr-2"></i>İnsulin</h4>
+                    <div class="trivia-box">
+                        <p><strong>💉 Gizli Silah:</strong> IPED protokolleri - multifaceted strategies!</p>
+                    </div>
+                    <p><strong>Protokol:</strong> Egzersiz sonrası, karbohidrat loading</p>
+                    <p><strong>Etki:</strong> Glikojen maksimizasyonu, anabolik</p>
+                    <p><strong>Tespit:</strong> Çok zor, kan testi gerekli</p>
+                    <p><strong>Riskler:</strong> Hipoglisemik koma, ölüm</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Thyroid Hormonları (T3/T4)</h4>
+                    <div class="trivia-box">
+                        <p><strong>🏅 Olimpiyat:</strong> Şu anda yasal ama Olympic Games'de yaygın self-report!</p>
+                    </div>
+                    <p><strong>Etki:</strong> Kas kan akışı, myogenesis artışı</p>
+                    <p><strong>Durum:</strong> Şu anda yasal, WADA tartışması var</p>
+                    <p><strong>Kullanım:</strong> Kilo kaybı, metabolizma artışı</p>
+                    <p><strong>Riskler:</strong> Tirotoksikoz, kalp ritim bozukluğu</p>
+                </div>
+
+                <h3><i class="fas fa-mask mr-3"></i>Maskeleme Ajanları</h3>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-tint mr-2"></i>Desmopressin</h4>
+                    <div class="trivia-box">
+                        <p><strong>🛏️ İlginç:</strong> Yatak ıslatma tedavisi ilacı - kan testlerini kandırmak için kullanılıyor!</p>
+                    </div>
+                    <p><strong>Mekanizma:</strong> V2 reseptör agonisti, hemodilution</p>
+                    <p><strong>Etki:</strong> Kan seyreltme, konsantrasyon düşürme</p>
+                    <p><strong>Tespit:</strong> WADA prohibited list S5</p>
+                    <p><strong>Riskler:</strong> Hiponatremi, su intoksikasyonu</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Furosemid</h4>
+                    <p><strong>Mekanizma:</strong> Diuretik masking, rapid elimination</p>
+                    <p><strong>Etki:</strong> Hızlı idrar üretimi, dilution masking</p>
+                    <p><strong>Tespit:</strong> Rutin doping kontrolünde aranır</p>
+                    <p><strong>Riskler:</strong> Dehidratasyon, elektrolit dengesizliği</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-pills mr-2"></i>Probenecid</h4>
+                    <p><strong>Mekanizma:</strong> Renal clearance inhibition</p>
+                    <p><strong>Etki:</strong> Böbrek atılımını yavaşlatma</p>
+                    <p><strong>Kullanım:</strong> Steroid eliminasyonunu geciktirme</p>
+                    <p><strong>Riskler:</strong> Böbrek hasarı, ürik asit artışı</p>
+                </div>
+
+                <h3><i class="fas fa-dna mr-3"></i>Gen Dopingi ve Gelecek Tehditler</h3>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-dna mr-2"></i>IGF-1 Gen Terapisi</h4>
+                    <div class="trivia-box">
+                        <p><strong>🧬 Süper Gen:</strong> Myostatin geneti %1 insanda eksik = doğuştan süper kaslı!</p>
+                    </div>
+                    <p><strong>Protokol:</strong> AAV-IGF1 gene transfer</p>
+                    <p><strong>Etki:</strong> Kas hipertrofisi, athletic performance</p>
+                    <p><strong>Tespit:</strong> Dried blood spot sampling</p>
+                    <p><strong>Riskler:</strong> Kontrolsüz kas büyümesi, tümör riski</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-dna mr-2"></i>Myostatin İnhibisyonu</h4>
+                    <p><strong>Protokol:</strong> Gene silencing, protein inhibition</p>
+                    <p><strong>Etki:</strong> Kas sınırlayıcı faktör kaldırma</p>
+                    <p><strong>Performans:</strong> Dramatik kas artışı</p>
+                    <p><strong>Riskler:</strong> Organ büyümesi, fonksiyon kaybı</p>
+                </div>
+
+                <div class="illegal-substance">
+                    <h4><i class="fas fa-robot mr-2"></i>AI-Designed Compounds</h4>
+                    <div class="trivia-box">
+                        <p><strong>🤖 AI Tehdit:</strong> Generative AI ile yeni PED tasarımı - mevcut testleri kandırabilir!</p>
+                    </div>
+                    <p><strong>Yaklaşım:</strong> AI modification of existing PEDs</p>
+                    <p><strong>Amaç:</strong> Detection evasion</p>
+                    <p><strong>Risk:</strong> Unknown safety profile</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trivia Tab -->
+        <div id="trivia" class="tab-content">
+            <div class="card">
+                <h2><i class="fas fa-lightbulb mr-3"></i>İlginç Trivia ve Şaşırtıcı Gerçekler</h2>
+
+                <div class="trivia-box">
+                    <h4>🤯 Şaşırtıcı İstatistikler</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Kenya'nın Doping Krizi:</strong> 119 yasaklı atlet - bu nüfusun %0.002'si demek!</li>
+                        <li><strong>EPO Mikrodozaj Trendi:</strong> %78 kullanım oranı - modern dopingin yeni yüzü</li>
+                        <li><strong>Tramadol Skandalı:</strong> Tour de France'ta %80 kullanım - "legal morphine"</li>
+                        <li><strong>Sodyum Bikarbonat:</strong> Paris 2024'te %80 kullanım - "legal doping"</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>🌟 Ünlü Sporcu Hikayeleri</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Mo Farah'ın Kafein Stratejisi:</strong> Tam 3.5 mg/kg - 1 saniye fazla alsaydı doping!</li>
+                        <li><strong>Usain Bolt'un Formula:</strong> Hiç yasal supplement almadı, sadece yam ve muz</li>
+                        <li><strong>Ben Johnson 1988:</strong> Tek iğne stanozolol ile 20 yıllık kariyer bitti</li>
+                        <li><strong>Lance Armstrong:</strong> EPO kullanımı 7 Tour de France galibiyetine mal oldu</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>🧬 Genetik Mucizeler</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>ACTN3 "Hız Geni":</strong> %70 Karayipli atletlerde var - doğal sprint yeteneği</li>
+                        <li><strong>Myostatin Eksikliği:</strong> %1 insanda var - doğuştan çift kas</li>
+                        <li><strong>EPO Reseptörleri:</strong> Tibet'lilerde %300 fazla - doğal yüksek irtifa</li>
+                        <li><strong>Kenyalı Koşucular:</strong> Doğal olarak %15 daha fazla hemoglobin</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>💊 Supplement Keşifleri</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>HMB:</strong> Avokado ve greyfurt kabuğundan keşfedildi</li>
+                        <li><strong>Taurin:</strong> İlk olarak boğa safrasından izole edildi</li>
+                        <li><strong>Kreatin:</strong> 1832'de et suyunda keşfedildi</li>
+                        <li><strong>Beta-alanin:</strong> Karıncalanma = çalışıyor demek!</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>🚀 Uzay ve Spor Bağlantısı</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Beetroot Juice:</strong> NASA astronotları Mars'ta performans için kullanıyor</li>
+                        <li><strong>Cherry Juice:</strong> Michigan araştırması: 84 dakika daha fazla uyku</li>
+                        <li><strong>Oksijen %21+:</strong> "Oksijen dopingi" sayılır - yasaklı</li>
+                        <li><strong>Yüksek İrtifa:</strong> Doğal EPO artışı - %30'a kadar</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>⚖️ Yasal Paradokslar</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Kafein Limiti:</strong> 2004'te kaldırıldı - kahve içmeyen sporcu yoktu!</li>
+                        <li><strong>Alkol:</strong> Okçulukta yasaklı, koşuda serbest</li>
+                        <li><strong>Cannabis:</strong> Sadece yarış sırasında yasaklı</li>
+                        <li><strong>Thyroid:</strong> Şu anda yasal ama WADA tartışması</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>🔬 Bilimsel Meraklar</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Laktat Paradoksu:</strong> Yorgunluk maddesi değil, yakıt!</li>
+                        <li><strong>Ion Mobility-MS:</strong> Yeni nesil steroid tespit teknolojisi</li>
+                        <li><strong>24 Saatlik ABP:</strong> Biological passport hızlı analiz</li>
+                        <li><strong>100 Picogram:</strong> NCAA'nin SARMs detection limiti</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>💀 Tehlikeli Gerçekler</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>GW501516:</strong> Kanser riski nedeniyle klinik denemeler durduruldu</li>
+                        <li><strong>Desmopressin:</strong> Yatak ıslatma ilacı - kan kandırma için</li>
+                        <li><strong>Designer Steroids:</strong> 31 farklı sentetik peptid mevcut</li>
+                        <li><strong>AI Doping:</strong> Yapay zeka ile yeni compound tasarımı</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>📊 Mikrodozaj Trendi</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>EPO:</strong> 9-20 IU/kg protokoller, %20-60 tespit oranı</li>
+                        <li><strong>Testosterone:</strong> 12.5mg topikal, 48h tespit penceresi</li>
+                        <li><strong>Maskeleme:</strong> Timing manipulation, baseline alteration</li>
+                        <li><strong>Detection Window:</strong> Çoğu madde 24-72 saat</li>
+                    </ul>
+                </div>
+
+                <div class="trivia-box">
+                    <h4>🌍 Küresel Doping Manzarası</h4>
+                    <ul class="list-disc list-inside">
+                        <li><strong>2024 Totali:</strong> 481 yasaklı sporcu - saniyede 1</li>
+                        <li><strong>Kenya Liderliği:</strong> 119 yasaklı - doping başkenti</li>
+                        <li><strong>Rusya:</strong> 73 yasaklı - systematic doping kalıntısı</li>
+                        <li><strong>Türkiye:</strong> 20 yasaklı - %4.4 oran</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Referanslar -->
+        <div class="card mt-8">
+            <h2><i class="fas fa-book mr-3"></i>Bilimsel Referanslar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                    <h4>WADA Resmi Dökümanları</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>WADA 2024 Prohibited List</li>
+                        <li>WADA Technical Document TD2024EPO</li>
+                        <li>Athlete Biological Passport Guidelines</li>
+                        <li>WADA Monitoring Program 2024</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Peer-Reviewed Araştırmalar</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Wiley Online Library - EPO Microdosing</li>
+                        <li>Gazi Medical Journal - Tramadol Effects</li>
+                        <li>RSC Advances - AICAR Detection</li>
+                        <li>PMC Articles - Peptide Doping</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Sports Medicine Dergileri</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Scandinavian Journal of Medicine & Science</li>
+                        <li>International Journal of Sport Nutrition</li>
+                        <li>Journal of Applied Physiology</li>
+                        <li>Sports Medicine Open</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Analitik Kimya</h4>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Drug Testing and Analysis</li>
+                        <li>Clinical Chemistry</li>
+                        <li>Analytical Science Journals</li>
+                        <li>Mass Spectrometry Reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 pt-8 border-t border-gray-700">
+            <div class="author-badge">
+                <i class="fas fa-user-graduate mr-2"></i>
+                Hazırlayan: Ümit Emre Erdoğan
+            </div>
+            <p class="text-gray-400 mt-4">Bu araştırma eğitim ve bilgilendirme amaçlıdır. 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab System
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+
+            // Initialize charts if overview tab is selected
+            if (tabName === 'overview') {
+                setTimeout(initCharts, 100);
+            }
+        }
+
+        // Chart System - Fixed for PDF and scroll issues
+        function initCharts() {
+            // Destroy existing charts
+            const canvases = ['dopingChart', 'performanceChart', 'detectionChart'];
+            canvases.forEach(canvasId => {
+                const canvas = document.getElementById(canvasId);
+                if (canvas && canvas.chart) {
+                    canvas.chart.destroy();
+                }
+            });
+
+            // Doping Statistics Chart
+            const dopingCtx = document.getElementById('dopingChart');
+            if (dopingCtx) {
+                dopingCtx.chart = new Chart(dopingCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Kenya', 'Hindistan', 'Rusya', 'Türkiye', 'İtalya', 'ABD', 'Ukrayna', 'İran'],
+                        datasets: [{
+                            label: 'Yasaklı Sporcu Sayısı',
+                            data: [119, 108, 73, 20, 18, 15, 12, 11],
+                            backgroundColor: [
+                                '#ef4444', '#f97316', '#eab308', '#22c55e',
+                                '#06b6d4', '#3b82f6', '#8b5cf6', '#ec4899'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        },
+                        plugins: {
+                            legend: {
+                                labels: { color: '#ffffff' }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#ffffff' },
+                                grid: { color: '#374151' }
+                            },
+                            x: {
+                                ticks: { color: '#ffffff' },
+                                grid: { color: '#374151' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Performance Increase Chart
+            const performanceCtx = document.getElementById('performanceChart');
+            if (performanceCtx) {
+                performanceCtx.chart = new Chart(performanceCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['EPO', 'Testosteron', 'Büyüme Hormonu', 'SARMs', 'Stimulanlar', 'Beta-2 Agonistler', 'Kreatin', 'Kafein'],
+                        datasets: [{
+                            label: 'Performans Artışı (%)',
+                            data: [15, 12, 8, 10, 7, 6, 15, 5],
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: {
+                            intersect: false,
+                            mode: 'index'
+                        },
+                        plugins: {
+                            legend: {
+                                labels: { color: '#ffffff' }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#ffffff' },
+                                grid: { color: '#374151' }
+                            },
+                            x: {
+                                ticks: { color: '#ffffff' },
+                                grid: { color: '#374151' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Detection Rates Chart
+            const detectionCtx = document.getElementById('detectionChart');
+            if (detectionCtx) {
+                detectionCtx.chart = new Chart(detectionCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Tespit Edilen', 'Mikrodozaj (Kaçan)', 'Maskeleme (Kaçan)', 'Yeni Maddeler'],
+                        datasets: [{
+                            data: [45, 35, 15, 5],
+                            backgroundColor: ['#ef4444', '#f97316', '#eab308', '#8b5cf6'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: '#ffffff' }
+                            }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initCharts();
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            setTimeout(initCharts, 300);
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDpYocOQIxpCrqU9opx3mNaaVis7kt80E4gQ80xpnCZaGH1C71QIKU4yuGywA%2B8xwJ1IM%2FjHdj7DyI07OCOsxb%2Bv%2BHjLarPLmLS441BSNrYGyjzAumWYrLNe3FyOdH6Ieod1%2BD80Cpmnoqb0we99QkPQodYF0cbb4s66xI4FGPWnahiLnU6bIshJMCH7Fmh7NmkHnTvJbrrkArAnI1pLr%2FcJxStYCgekLS1IE3JB9WEpDmgIeMbxjqgD1HL6TB96LaQmjRIWdo2hDx0QBS66NM3uGFpr2s8MWsiiQiaDg8bRP58eMDBF8Gup7CqcJFdfLaT%2Fp%2BMoDBdEv4YsZIyOpKWNRCIAiktYOxCQKwnzS%2FtmB7HPg%2FSSFh1qzVVvauj3OOBPuWUdlOKUYiqrGLY6F6STYcFxIZbrTwBDzMUR661BeIv2V1KZVqOdSBl2%2BDp5qkxGtPYwCm%2FbHcr7ldVTKuRQn%2Bfc40PwxJfVkGuIwM6O7pVUOfxVgV4JoX5Cx%2BZHgB9MzIgnw3n8IAanj0L%2B0OWA%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDpYocOQIxpCrqU9opx3mNaaVis7kt80E4gQ80xpnCZaGH1C71QIKU4yuGywA+8xwJ1IM/jHdj7DyI07OCOsxb+v+HjLarPLmLS441BSNrYGyjzAumWYrLNe3FyOdH6Ieod1+D80Cpmnoqb0we99QkPQodYF0cbb4s66xI4FGPWnahiLnU6bIshJMCH7Fmh7NmkHnTvJbrrkArAnI1pLr/cJxStYCgekLS1IE3JB9WEpDmgIeMbxjqgD1HL6TB96LaQmjRIWdo2hDx0QBS66NM3uGFpr2s8MWsiiQiaDg8bRP58eMDBF8Gup7CqcJFdfLaT/p+MoDBdEv4YsZIyOpKWNRCIAiktYOxCQKwnzS/tmB7HPg/SSFh1qzVVvauj3OOBPuWUdlOKUYiqrGLY6F6STYcFxIZbrTwBDzMUR661BeIv2V1KZVqOdSBl2+Dp5qkxGtPYwCm/bHcr7ldVTKuRQn+fc40PwxJfVkGuIwM6O7pVUOfxVgV4JoX5Cx+ZHgB9MzIgnw3n8IAanj0L+0OWA=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
